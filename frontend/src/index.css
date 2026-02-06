@@ -2,28 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Luxury Minimalist Design System - Warm Neutral Palette */
+/* Luxury Minimalist Design System - Deep Blue & Green Palette */
 :root {
-  /* Primary Backgrounds - Warm foundation */
-  --bg-primary: #fffef2;
-  --bg-secondary: #f6f5e8;
-  --bg-subtle: #ebeade;
+  /* Primary Backgrounds - Sophisticated foundation */
+  --bg-primary: #fafbfb;
+  --bg-secondary: #f0f4f5;
+  --bg-subtle: #e8eeef;
+  --bg-accent: #e8f1f0;
   
   /* Text Hierarchy - Rich contrast */
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --text-light: #bcbbb4;
-  --text-meta: #4a4a4a;
+  --text-primary: #1a2d3d;
+  --text-secondary: #4a5f6f;
+  --text-light: #7a8f9f;
+  --text-meta: #5a6d7d;
   
-  /* Interactive States - Minimal emphasis */
-  --interactive-base: #333333;
-  --interactive-hover: #000000;
-  --focus-outline: #252525;
+  /* Interactive States - Deep blue emphasis */
+  --interactive-base: #2c4f5f;
+  --interactive-hover: #1a3a4a;
+  --focus-outline: #2c5f7c;
   
   /* Borders & Separators */
-  --border-light: #bcbbb4;
-  --border-medium: #cccccc;
-  --border-subtle: rgba(51,51,51,0.2);
+  --border-light: #c8d5da;
+  --border-medium: #b0c5cc;
+  --border-subtle: rgba(44,79,95,0.15);
+  
+  /* Accent Colors - Deep blues and greens */
+  --accent-navy: #1a3a52;
+  --accent-teal: #2d5a5a;
+  --accent-forest: #3a5a4a;
   
   /* Functional Colors - Restrained approach */
   --status-error: #ba3e2b;
