@@ -139,22 +139,20 @@ const Home = () => {
 
       {/* About Background Section */}
       <section className="section-padding">
-        <div className="container">
-          <div className="about-grid">
+        <div className="container container-narrow">
+          <div className="about-content-wrapper">
+            <h2 className="heading-1 section-title">About My Background</h2>
+            <p className="body-large about-text">
+              I'm a Registered Social Worker (MSW) with over 16 years of experience in 
+              mental health care. My work is grounded in trauma-informed, evidence-based 
+              practice, with a focus on practical, meaningful change.
+            </p>
             <div className="about-image-container">
-              <img
+              <img 
                 src="https://customer-assets.emergentagent.com/job_calm-counseling-4/artifacts/h3s0azab_DSC08408-Edit.jpg"
                 alt="Professional headshot"
-                className="about-image" />
-
-            </div>
-            <div className="about-content">
-              <h2 className="heading-1 section-title">About My Background</h2>
-              <p className="body-large">
-                I'm a Registered Social Worker (MSW) with over 16 years of experience in 
-                mental health care. My work is grounded in trauma-informed, evidence-based 
-                practice, with a focus on practical, meaningful change.
-              </p>
+                className="about-image"
+              />
             </div>
           </div>
         </div>
