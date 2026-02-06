@@ -170,6 +170,17 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Contact Form Section */}
+      <section className="section-padding contact-form-section">
+        <div className="container container-narrow">
+          <h2 className="heading-1 section-title">Get in Touch</h2>
+          <p className="body-large section-intro">
+            Have questions before booking? Send a message and I'll get back to you.
+          </p>
+          <ContactForm />
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="section-padding cta-section">
         <div className="container container-narrow">
