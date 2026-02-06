@@ -15,8 +15,8 @@ const Home = () => {
             <h1 className="hero-large">
               High-quality counseling, made more accessible.
             </h1>
-            <p className="hero-subtitle">
-              Evidence-based, trauma-informed therapy. Virtual sessions available.
+            <p className="hero-subtitle">Evidence-based, client-centered therapy. Virtual sessions available.
+
             </p>
             <a
               href={mockData.janeAppBookingUrl}
@@ -49,9 +49,9 @@ const Home = () => {
       <section className="section-padding section-alt">
         <div className="container container-narrow">
           <h2 className="heading-1 section-title">Who I Work With</h2>
-          <p className="body-large section-intro">
-            I work with adults who are feeling stuck, overwhelmed, or disconnected—and 
-            who want thoughtful, professional support to move forward.
+          <p className="body-large section-intro">I work with adults and adolescents who are feeling stuck, overwhelmed, or disconnected—and who want thoughtful, professional support to move forward.
+
+
           </p>
           
           <div className="content-spacing">
@@ -70,9 +70,9 @@ const Home = () => {
             </ul>
           </div>
           
-          <p className="body-large">
-            You don't need a diagnosis, a crisis, or the right words to begin. 
-            If something in your life isn't working the way you'd like, that's enough.
+          <p className="body-large">You don't need a diagnosis, a crisis, or the right words to begin. If you'd like help exploring yourself or making a change, let's talk.
+
+
           </p>
         </div>
       </section>
@@ -130,8 +130,8 @@ const Home = () => {
               as accessible as possible. Reduced-fee sessions may be available depending on availability.
             </p>
             
-            <p className="body-large">
-              If cost or coverage is a concern, you're welcome to ask.
+            <p className="body-large">If cost or coverage is a concern, please ask about sliding scale rates.
+
             </p>
           </div>
         </div>
@@ -142,17 +142,17 @@ const Home = () => {
         <div className="container container-narrow">
           <div className="about-content-wrapper">
             <h2 className="heading-1 section-title">About My Background</h2>
-            <p className="body-large about-text">
-              I'm a Registered Social Worker (MSW) with over 16 years of experience in 
-              mental health care. My work is grounded in trauma-informed, evidence-based 
-              practice, with a focus on practical, meaningful change.
+            <p className="body-large about-text">I'm a Registered Social Worker (MSW) with over 16 years of experience in mental health care. My work is grounded in trauma-informed, evidence-based practices such as Cognitive Behavioral and Narrative Therapies, with a focus on practical, meaningful change.
+
+
+
             </p>
             <div className="about-image-container">
-              <img 
+              <img
                 src="https://customer-assets.emergentagent.com/job_calm-counseling-4/artifacts/h3s0azab_DSC08408-Edit.jpg"
                 alt="Professional headshot"
-                className="about-image"
-              />
+                className="about-image" />
+
             </div>
           </div>
         </div>
