@@ -8,8 +8,9 @@ export const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-title">{mockData.practiceInfo.name}</h3>
-            <p className="footer-text">{mockData.practiceInfo.location}</p>
+            <p className="footer-location">{mockData.practiceInfo.location}</p>
             <p className="footer-text">{mockData.practiceInfo.credentials}</p>
+            <p className="footer-text">{mockData.practiceInfo.responseTime}</p>
           </div>
           
           <div className="footer-section">

@@ -12,9 +12,10 @@ export const mockData = {
   
   // Practice information
   practiceInfo: {
-    name: "Private Counseling Practice",
-    location: "Located in Alberta",
+    name: "Jeff's Counseling TBD",
+    location: "Calgary, Alberta",
     credentials: "Registered Social Worker (MSW)",
-    experience: "Over 16 years of experience"
+    experience: "Over 16 years of experience",
+    responseTime: "Response within 24-48 hours"
   }
 };

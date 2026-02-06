@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { ContactForm } from '../components/ContactForm';
 import { mockData } from '../mockData';
 
 const Home = () => {
@@ -83,7 +84,7 @@ const Home = () => {
           <h2 className="heading-1 section-title">What Sessions Are Like</h2>
           <p className="body-large section-intro">
             Sessions are collaborative, practical, and focused on what matters most to you. 
-            Virtual appointments are available.
+            Virtual appointments are conducted via secure video platform for your privacy and convenience.
           </p>
           
           <div className="content-spacing">
