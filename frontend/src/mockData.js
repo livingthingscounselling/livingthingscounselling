@@ -12,7 +12,7 @@ export const mockData = {
   
   // Practice information
   practiceInfo: {
-    name: "Jeff's Counseling",
+    name: "Jeff's Counseling TBD",
     location: "Calgary, Alberta",
     credentials: "Registered Social Worker (MSW)",
     experience: "Over 16 years of experience",
