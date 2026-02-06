@@ -18,12 +18,12 @@ const Home = () => {
             <p className="hero-subtitle">
               Evidence-based, trauma-informed therapy. Virtual sessions available.
             </p>
-            <a 
+            <a
               href={mockData.janeAppBookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
-            >
+              className="btn-primary">
+
               Book a Session
             </a>
           </div>
@@ -34,8 +34,8 @@ const Home = () => {
       <section className="section-padding">
         <div className="container container-narrow">
           <div className="content-block">
-            <h2 className="heading-1">
-              You don't have to know exactly what's wrong to start.
+            <h2 className="heading-1">You don't have to know exactly where to start.
+
             </h2>
             <p className="body-large">
               If something feels off, stressful, or heavy, that's reason enough. 
@@ -142,11 +142,11 @@ const Home = () => {
         <div className="container">
           <div className="about-grid">
             <div className="about-image-container">
-              <img 
+              <img
                 src="https://customer-assets.emergentagent.com/job_calm-counseling-4/artifacts/h3s0azab_DSC08408-Edit.jpg"
                 alt="Professional headshot"
-                className="about-image"
-              />
+                className="about-image" />
+
             </div>
             <div className="about-content">
               <h2 className="heading-1 section-title">About My Background</h2>
@@ -176,12 +176,12 @@ const Home = () => {
         <div className="container container-narrow">
           <div className="cta-content">
             <h2 className="heading-1">Ready to get started?</h2>
-            <a 
+            <a
               href={mockData.janeAppBookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
-            >
+              className="btn-primary">
+
               Book a Session
             </a>
           </div>
@@ -189,8 +189,8 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Home;
