@@ -37,9 +37,9 @@ const Home = () => {
             <h2 className="heading-1">You don't have to know exactly where to start.
 
             </h2>
-            <p className="body-large">
-              If something feels off, stressful, or heavy, that's reason enough. 
-              We'll take the time to understand what's going on and figure out next steps together.
+            <p className="body-large">If something feels off, stressful, or heavy, that’s reason enough. We’ll take the time to understand what’s going on and figure out next steps together, and create a space where you will feel comfortable and supported.
+
+
             </p>
           </div>
         </div>
