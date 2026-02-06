@@ -59,10 +59,10 @@ const Home = () => {
               Common reasons people reach out include:
             </p>
             <ul className="content-list">
-              <li className="body-regular">Stress, burnout, and work-related pressure</li>
-              <li className="body-regular">ADHD-related challenges, including focus, overwhelm, emotional regulation, and self-esteem</li>
-              <li className="body-regular">Depression, low mood, or loss of motivation</li>
               <li className="body-regular">Anxiety, or feeling "off" without a clear reason</li>
+              <li className="body-regular">Depression, low mood, or loss of motivation</li>
+              <li className="body-regular">ADHD-related challenges, including focus, overwhelm, emotional regulation, and self-esteem</li>
+              <li className="body-regular">Stress, burnout, and work-related pressure</li>
               <li className="body-regular">Life transitions, identity shifts, or major changes</li>
               <li className="body-regular">Relationship challenges or communication difficulties</li>
               <li className="body-regular">Parenting stress and family-related strain</li>

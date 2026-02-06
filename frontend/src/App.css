@@ -126,16 +126,20 @@
 }
 
 .content-list li {
-    padding-left: 24px;
+    padding-left: 28px;
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .content-list li:before {
-    content: '—';
+    content: '';
     position: absolute;
     left: 0;
-    color: var(--text-secondary);
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-secondary);
 }
 
 /* About Section */
