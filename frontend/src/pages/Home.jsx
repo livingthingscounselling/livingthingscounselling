@@ -13,17 +13,17 @@ const Home = () => {
       <section className="hero-section">
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-large">
+            <h1 className="hero-large animate-fade-in">
               High-quality counseling, made more accessible.
             </h1>
-            <p className="hero-subtitle">Evidence-based, client-centered therapy. Virtual sessions available.
+            <p className="hero-subtitle animate-fade-in animate-delay-1">Evidence-based, client-centered therapy. Virtual sessions available via secure video platform.
 
             </p>
             <a
               href={mockData.janeAppBookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary">
+              className="btn-primary animate-fade-in animate-delay-2">
 
               Book a Session
             </a>
