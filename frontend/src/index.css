@@ -2,114 +2,234 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Luxury Minimalist Design System - Warm Neutral Palette */
+:root {
+  /* Primary Backgrounds - Warm foundation */
+  --bg-primary: #fffef2;
+  --bg-secondary: #f6f5e8;
+  --bg-subtle: #ebeade;
+  
+  /* Text Hierarchy - Rich contrast */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #bcbbb4;
+  --text-meta: #4a4a4a;
+  
+  /* Interactive States - Minimal emphasis */
+  --interactive-base: #333333;
+  --interactive-hover: #000000;
+  --focus-outline: #252525;
+  
+  /* Borders & Separators */
+  --border-light: #bcbbb4;
+  --border-medium: #cccccc;
+  --border-subtle: rgba(51,51,51,0.2);
+  
+  /* Functional Colors - Restrained approach */
+  --status-error: #ba3e2b;
+  --status-success: #4a4a4a;
+  
+  /* Shadcn compatibility */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --radius: 0rem;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
-code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+/* Typography System */
+.hero-large {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+}
+
+.heading-1 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+}
+
+.body-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
+}
+
+/* Buttons - Sharp, Minimal Design (0px border radius) */
+.btn-primary {
+  background: transparent;
+  color: var(--interactive-base);
+  border: 1px solid var(--interactive-base);
+  border-radius: 0px;
+  padding: 19px 23px;
+  min-width: 210px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Suisse Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s cubic-bezier(.645,.045,.355,1), color 0.2s cubic-bezier(.645,.045,.355,1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:hover {
+  background: var(--interactive-base);
+  color: var(--bg-primary);
+}
+
+.btn-primary:active {
+  background: var(--interactive-hover);
+  color: var(--bg-primary);
+}
+
+/* Focus States */
+.btn-primary:focus-visible {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 4px;
+}
+
+/* Transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(.645,.045,.355,1);
+}
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+  .hero-large {
+    font-size: 36px;
+  }
+  
+  .heading-1 {
+    font-size: 28px;
+  }
+  
+  .heading-2 {
+    font-size: 20px;
+  }
+  
+  .body-large {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-large {
+    font-size: 30px;
+  }
+  
+  .heading-1 {
+    font-size: 24px;
+  }
+  
+  .heading-2 {
+    font-size: 18px;
+  }
+  
+  .body-large {
+    font-size: 16px;
+  }
+  
+  .body-regular {
+    font-size: 15px;
+  }
 }
 
 @layer base {
-    :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
-    }
-    .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 @layer base {
-    * {
-        @apply border-border;
-    }
-    body {
-        @apply bg-background text-foreground;
-    }
-}
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
 
-@layer base {
-    [data-debug-wrapper="true"] {
-        display: contents !important;
-    }
-
-    [data-debug-wrapper="true"] > * {
-        margin-left: inherit;
-        margin-right: inherit;
-        margin-top: inherit;
-        margin-bottom: inherit;
-        padding-left: inherit;
-        padding-right: inherit;
-        padding-top: inherit;
-        padding-bottom: inherit;
-        column-gap: inherit;
-        row-gap: inherit;
-        gap: inherit;
-        border-left-width: inherit;
-        border-right-width: inherit;
-        border-top-width: inherit;
-        border-bottom-width: inherit;
-        border-left-style: inherit;
-        border-right-style: inherit;
-        border-top-style: inherit;
-        border-bottom-style: inherit;
-        border-left-color: inherit;
-        border-right-color: inherit;
-        border-top-color: inherit;
-        border-bottom-color: inherit;
-    }
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    gap: inherit;
+    border-left-width: inherit;
+    border-right-width: inherit;
+    border-top-width: inherit;
+    border-bottom-width: inherit;
+    border-left-style: inherit;
+    border-right-style: inherit;
+    border-top-style: inherit;
+    border-bottom-style: inherit;
+    border-left-color: inherit;
+    border-right-color: inherit;
+    border-top-color: inherit;
+    border-bottom-color: inherit;
+  }
 }
