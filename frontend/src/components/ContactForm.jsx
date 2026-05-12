@@ -25,11 +25,12 @@ export const ContactForm = () => {
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
+      const data = err?.response?.data;
       const detail =
-        err?.response?.data?.detail ||
-        (Array.isArray(err?.response?.data) && err.response.data[0]?.msg) ||
+        (Array.isArray(data?.detail) && data.detail[0]?.msg) ||
+        (typeof data?.detail === 'string' && data.detail) ||
         'Something went wrong. Please try again or email directly.';
-      setErrorMessage(typeof detail === 'string' ? detail : 'Something went wrong. Please try again.');
+      setErrorMessage(detail);
       setStatus('error');
     }
   };

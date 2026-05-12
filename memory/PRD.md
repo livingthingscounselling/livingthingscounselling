@@ -1,98 +1,91 @@
-# Jeff's Counseling Practice Website - PRD
+# Living Things Counselling — Practice Website PRD
 
 ## Original Problem Statement
-Create a calm, professional website for a private counseling practice. The site is for a Registered Social Worker providing virtual, trauma-informed, evidence-based therapy for adults and adolescents. The tone should be calm, grounded, human, and non-salesy.
+Create a calm, professional website for a private counseling practice. The site is for a Registered Social Worker (Calgary, AB) providing virtual, trauma-informed, evidence-based therapy for adults and adolescents. The tone should be calm, grounded, human, and non-salesy.
 
 ## User Persona
 **Target Audience**: Adults and adolescents (13+) seeking professional mental health support
 - Feeling stuck, overwhelmed, or disconnected
 - May be experiencing anxiety, depression, ADHD, stress, burnout
 - Going through life transitions, relationship challenges, or parenting stress
-- May have trauma or difficult past experiences
 - Looking for accessible, professional, evidence-based therapy
-- Prefer virtual sessions for convenience
+- Prefer virtual sessions
 
-## Core Requirements (Static)
+## Core Requirements
 1. **Design**: Calm, professional, minimal aesthetic with deep blue-green colors
-2. **Tone**: Grounded, human, non-salesy, reassuring
+2. **Tone**: Grounded, human, non-salesy
 3. **Primary CTAs**: "Book a Session" (Jane App) and Contact Form
 4. **Content Sections**: Hero, Reassurance, Who I Work With, What Sessions Are Like, Fees, About, Province & Licensing, Contact Form, Final CTA
-5. **Technical**: React frontend, fully responsive design
-6. **Typography**: Inter font for professional warmth
-7. **Design System**: Luxury minimalist with sharp rectangular buttons (0px border radius)
+5. **Tech**: React frontend + FastAPI backend + MongoDB
+6. **Typography**: Inter font
+7. **Design System**: Luxury minimalist; sharp rectangular buttons
 
-## What's Been Implemented
+## Implementation Status
 
-### Phase 1: Initial Frontend (Feb 6, 2026)
-- Created luxury minimalist design with warm neutral colors
-- Built all core content sections
-- Implemented responsive design
-- Integrated professional headshot
+### Phase 1–3 (prior sessions, Feb 2026)
+- Built full luxury minimalist frontend with deep blue-green palette, Inter font, micro-animations
+- All content sections complete (Hero, Reassurance, Audience, Sessions, Fees, About, Licensing, Contact, CTA)
+- Responsive across mobile/tablet/desktop
 
-### Phase 2: Color & Typography Updates (Feb 6, 2026)
-- Updated to deep blue-green color palette (#2c4f5f, #1a2d3d)
-- Subtle blue-green gradient on hero (#e8f1f0 to #f0f4f5)
-- Implemented Inter font throughout
-- Restructured About section (text first, smaller centered headshot)
-- Changed bullet points to subtle circular dots
+### Phase 4 — Backend + Rename (Feb 12, 2026)
+- Renamed practice to **Living Things Counselling** (nav, footer, page title, meta description, copyright)
+- Wired real **Jane App booking URL**: `https://livingthingscounselling.janeapp.com` on all 4 CTAs (nav, hero, footer, final CTA)
+- Built **POST /api/contact** and **GET /api/contact** with Pydantic validation (`EmailStr`, length bounds), MongoDB persistence in `contact_submissions`
+- Integrated **Resend** for email notifications (graceful no-op when `RESEND_API_KEY` / `CONTACT_NOTIFICATION_EMAIL` not yet set — submissions still persist, `email_sent: false`)
+- Frontend `ContactForm` calls real backend via `axios`, with loading state ("Sending…"), inline 422 error parsing, success state, and "Send another message" reset
+- All form elements have `data-testid` attributes
+- Cleaned up unused mock fields (`contact.email`, `contact.phone`) and rewrote Footer accordingly
+- E2E tested: backend 9/9 pytest pass, frontend Playwright 100% pass (`/app/test_reports/iteration_1.json`)
 
-### Phase 3: Enhanced Features (Feb 6, 2026)
-- **Contact Form**: Name, Email, Message fields with success state (MOCKED - needs backend)
-- **Practice Name**: Updated to "Jeff's Counseling TBD"
-- **Microanimations**: Fade-in effects on hero, button hover/active states
-- **Footer Enhancement**: Calgary, Alberta location + "Response within 24-48 hours"
-- **Session Details**: Added "via secure video platform" mentions
-- **Mobile Optimization**: Tested and optimized for iPhone/tablet
+## Pending / Backlog
 
-### Content Refinements (User Edits)
-- Updated hero subtitle to "client-centered therapy"
-- Expanded audience to "adults and adolescents"
-- Added specific therapeutic approaches: "Cognitive Behavioral and Narrative Therapies"
-- Updated fees section: "sliding scale rates"
-- Changed Who I Work With ending: "let's talk"
+### P0
+- **Email notification activation** — user needs to provide:
+  - Resend API key (free at https://resend.com → API Keys) → set `RESEND_API_KEY` in `/app/backend/.env`
+  - Notification recipient email → set `CONTACT_NOTIFICATION_EMAIL`
+  - Optional: verified custom from-domain → set `CONTACT_FROM_EMAIL` (defaults to `onboarding@resend.dev`)
 
-## Technical Details
-- **Frontend**: React 19, React Router
-- **Styling**: Custom CSS with CSS variables, Inter font from Google Fonts
-- **Components**: Navigation, Footer, ContactForm, Home page
-- **Responsive**: Mobile-first approach with breakpoints at 640px, 1024px
-- **Animations**: CSS keyframe animations for fade-in effects
-- **Mock Data**: Jane App URL, contact info, practice details
+### P1
+- SEO: Open Graph image, Twitter card meta tags
+- Favicon update to match Living Things branding
+- Lightweight admin view to read submissions (currently accessible only via `GET /api/contact`)
 
-## Still TODO (Backend & Final Details)
+### P2
+- FAQ section (deferred unless requested)
+- Honeypot / rate-limit on `/api/contact` to deter spam
+- Custom domain (e.g., livingthingscounselling.com) — note: Emergent preview subdomain cannot be changed via code
 
-### P0 - Critical
-- **Contact Form Backend**: Connect form to email service or database
-- **Jane App URL**: Replace placeholder with actual booking link
-- **Contact Information**: Update email and phone number
-- **Final Practice Name**: Replace "Jeff's Counseling TBD" with actual name
+## Tech Stack
+- **Frontend**: React 19, React Router, axios, custom CSS w/ Inter
+- **Backend**: FastAPI, Motor (Mongo async), Pydantic v2, Resend SDK (async via `asyncio.to_thread`)
+- **Database**: MongoDB — collections: `status_checks`, `contact_submissions`
 
-### P1 - High Priority
-- SEO meta tags and descriptions
-- Open Graph tags for social sharing
-- Google Analytics or analytics integration
-- SSL certificate verification
+## Key Files
+- `/app/frontend/src/pages/Home.jsx` — page composition
+- `/app/frontend/src/components/{Navigation,Footer,ContactForm}.jsx`
+- `/app/frontend/src/mockData.js` — Jane URL + practice info
+- `/app/backend/server.py` — `/api/contact` POST/GET, Resend wrapper
+- `/app/backend/tests/test_contact_api.py` — pytest coverage
+- `/app/frontend/public/index.html` — title & meta
 
-### P2 - Nice to Have
-- FAQ section (deferred for now)
-- Testimonials section
-- Blog or resources section
-- Additional pages (About, Services, etc.)
+## API
+| Method | Route | Description |
+|---|---|---|
+| POST | `/api/contact` | Create contact submission (201). Optional email notify. |
+| GET | `/api/contact` | List submissions, desc by timestamp. |
+| POST/GET | `/api/status` | Pre-existing status check (regression baseline). |
 
-## Design System Reference
-- **Primary Background**: #fafbfb
-- **Secondary Background**: #f0f4f5
-- **Text Primary**: #1a2d3d
-- **Text Secondary**: #4a5f6f
-- **Interactive Base**: #2c4f5f
-- **Interactive Hover**: #1a3a4a
-- **Border Light**: #c8d5da
-- **Font**: Inter (400, 500 weights)
-- **Button Style**: Sharp rectangular (0px border radius)
+## Data Models
+**ContactSubmission**: `id` (uuid str), `name`, `email` (EmailStr), `message`, `timestamp` (ISO str in Mongo), `email_sent` (bool), `email_error` (str|null).
 
-## Notes
-- Contact form currently MOCKED (frontend only, no backend integration)
-- All CTAs link to placeholder Jane App URL
-- Practice name is temporary pending final decision
-- Site is fully functional as static marketing page
-- Mobile-optimized and ready for launch once backend/details finalized
+## Design System
+- Backgrounds: `#fafbfb`, `#f0f4f5`
+- Text: `#1a2d3d` / `#4a5f6f`
+- Interactive: `#2c4f5f` (hover `#1a3a4a`)
+- Border: `#c8d5da`
+- Font: Inter 400/500
+- Buttons: rectangular (0px radius)
+
+## Notes / Constraints
+- Emergent-generated preview subdomain cannot be changed via code — requires a custom domain
+- Resend "testing mode" only delivers to verified email addresses; verify a domain in Resend to send freely
