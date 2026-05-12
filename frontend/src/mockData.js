@@ -1,18 +1,12 @@
-// Mock data for counseling practice website
+// Site content data for Living Things Counselling
 
 export const mockData = {
-  // Jane App booking link - replace with actual Jane App URL when available
-  janeAppBookingUrl: "https://yourpractice.janeapp.com",
-  
-  // Contact information placeholders
-  contact: {
-    email: "contact@example.com",
-    phone: "(403) 555-0123"
-  },
-  
+  // Jane App public booking link
+  janeAppBookingUrl: "https://livingthingscounselling.janeapp.com",
+
   // Practice information
   practiceInfo: {
-    name: "Jeff's Counseling TBD",
+    name: "Living Things Counselling",
     location: "Calgary, Alberta",
     credentials: "Registered Social Worker (MSW)",
     experience: "Over 16 years of experience",

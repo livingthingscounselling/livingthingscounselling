@@ -12,25 +12,27 @@ export const Footer = () => {
             <p className="footer-text">{mockData.practiceInfo.credentials}</p>
             <p className="footer-text">{mockData.practiceInfo.responseTime}</p>
           </div>
-          
+
           <div className="footer-section">
-            <h3 className="footer-title">Contact</h3>
-            <p className="footer-text">Email: {mockData.contact.email}</p>
-            <p className="footer-text">Phone: {mockData.contact.phone}</p>
+            <h3 className="footer-title">Get in Touch</h3>
+            <p className="footer-text">
+              Use the contact form above to send a message, or book directly through Jane.
+            </p>
           </div>
-          
+
           <div className="footer-section">
-            <a 
+            <a
               href={mockData.janeAppBookingUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
+              data-testid="footer-book-session-link"
             >
               Book a Session
             </a>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p className="footer-text-small">
             © {new Date().getFullYear()} {mockData.practiceInfo.name}. Professional counseling services.
