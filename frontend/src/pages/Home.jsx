@@ -31,8 +31,30 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Reassurance Section */}
+      {/* About Me Section */}
       <section className="section-padding">
+        <div className="container container-narrow">
+          <div className="about-content-wrapper">
+            <h2 className="heading-1 section-title">About Me</h2>
+            <p className="body-large about-text">I'm a Registered Social Worker (MSW) with over 16 years of experience in mental health care. My work is grounded in trauma-informed, evidence-based practices such as Cognitive Behavioral and Narrative Therapies, with a focus on practical, meaningful change.
+
+
+
+            </p>
+            <div className="about-image-container">
+              <img
+                src="https://customer-assets.emergentagent.com/job_calm-counseling-4/artifacts/h3s0azab_DSC08408-Edit.jpg"
+                alt="Portrait of the Registered Social Worker and founder of Living Things Counselling"
+                loading="lazy"
+                className="about-image" />
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reassurance Section */}
+      <section className="section-padding section-alt">
         <div className="container container-narrow">
           <div className="content-block">
             <h2 className="heading-1">You don't have to know exactly where to start.
@@ -47,7 +69,7 @@ const Home = () => {
       </section>
 
       {/* Who I Work With Section */}
-      <section className="section-padding section-alt">
+      <section className="section-padding">
         <div className="container container-narrow">
           <h2 className="heading-1 section-title">Who I Work With</h2>
           <p className="body-large section-intro">I work with adults and adolescents who are feeling stuck, overwhelmed, or disconnected—and who want thoughtful, professional support to move forward.
@@ -79,7 +101,7 @@ const Home = () => {
       </section>
 
       {/* What Sessions Are Like Section */}
-      <section className="section-padding">
+      <section className="section-padding section-alt">
         <div className="container container-narrow">
           <h2 className="heading-1 section-title">What Sessions Are Like</h2>
           <p className="body-large section-intro">
@@ -117,7 +139,7 @@ const Home = () => {
       </section>
 
       {/* Fees & Accessibility Section */}
-      <section className="section-padding section-alt">
+      <section className="section-padding">
         <div className="container container-narrow">
           <h2 className="heading-1 section-title">Fees & Accessibility</h2>
           <p className="body-large section-intro">
@@ -134,27 +156,6 @@ const Home = () => {
             <p className="body-large">If cost or coverage is a concern, please ask about sliding scale rates.
 
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About Background Section */}
-      <section className="section-padding">
-        <div className="container container-narrow">
-          <div className="about-content-wrapper">
-            <h2 className="heading-1 section-title">About My Background</h2>
-            <p className="body-large about-text">I'm a Registered Social Worker (MSW) with over 16 years of experience in mental health care. My work is grounded in trauma-informed, evidence-based practices such as Cognitive Behavioral and Narrative Therapies, with a focus on practical, meaningful change.
-
-
-
-            </p>
-            <div className="about-image-container">
-              <img
-                src="https://customer-assets.emergentagent.com/job_calm-counseling-4/artifacts/h3s0azab_DSC08408-Edit.jpg"
-                alt="Professional headshot"
-                className="about-image" />
-
-            </div>
           </div>
         </div>
       </section>

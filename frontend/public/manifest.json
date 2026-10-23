@@ -1,0 +1,16 @@
+{
+  "short_name": "Living Things",
+  "name": "Living Things Counselling",
+  "description": "Professional, evidence-based virtual counselling for adults and adolescents in Alberta.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1a2d3d",
+  "background_color": "#fafbfb"
+}
